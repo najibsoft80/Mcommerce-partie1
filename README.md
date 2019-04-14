@@ -1,0 +1,13 @@
+# Mcommerce-partie1
+Code pour la première partie du cours d'architecture MS
+
+
+Conformément de ce qui a été annoncé au niveau de l'exercice merci de ne prendre en compte que les commits pour chaque partie
+comme suit :
+
+ID commit commence par (dans la liste des commits ne prenez que la plus récente pour chaque partie), pour vous aider à ce situer :
+
+Partie 1 : 3425aea...
+Partie 2 : 6530b2c...
+Partie 3 : b735086...
+Partie 4 : e204147...
