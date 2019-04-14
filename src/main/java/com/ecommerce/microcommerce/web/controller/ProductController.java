@@ -83,6 +83,7 @@ public class ProductController {
     }
 
      //Partie 1 : Affichage de la marge
+     @ApiOperation(value = "Partie 1 : Affichage de la marge")
      @GetMapping(value = "/AdminProduits")
     public Map<String , Integer> calculerMargeProduit(){
         List<Product> produits = productDao.findAll();
@@ -96,7 +97,8 @@ public class ProductController {
         return jsonFlow;
      }
 
-     //Partie 2 - Tri par ordre alphabétique
+     //Partie 2 - Tri par ordre alphabétique par nom produit en mode croissant ASCENDANT
+     @ApiOperation(value = "Tri par ordre alphabétique par nom produit en mode croissant ASCENDANT")
      @GetMapping(value = "/triProduitsAsc")
      public List<Product> trierProduitsParOrdreAlphabetique(){
         return productDao.findAllByOrderByNomAsc();
