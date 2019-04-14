@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
- * Created by Najib on 14/04/2019. New Exception MSA
+ * Created by Najib on 14/04/2019. New Exception
  */
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class ProduitGratuitException extends RuntimeException {
