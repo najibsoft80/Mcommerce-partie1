@@ -96,4 +96,10 @@ public class ProductController {
         return jsonFlow;
      }
 
+     //Partie 2 - Tri par ordre alphabétique
+     @GetMapping(value = "/triProduitsAsc")
+     public List<Product> trierProduitsParOrdreAlphabetique(){
+        return productDao.findAllByOrderByNomAsc();
+     }
+
 }
