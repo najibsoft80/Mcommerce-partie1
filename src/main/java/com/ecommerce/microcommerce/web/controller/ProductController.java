@@ -6,6 +6,7 @@ import com.ecommerce.microcommerce.web.exceptions.ProduitIntrouvableException;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import springfox.documentation.spring.web.json.Json;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Api( description="API pour es opérations CRUD sur les produits!!")
@@ -78,6 +82,18 @@ public class ProductController {
         return productDao.chercherUnProduitCher(400);
     }
 
+     //Partie 1 : Affichage de la marge
+     @GetMapping(value = "/AdminProduits")
+    public Map<String , Integer> calculerMargeProduit(){
+        List<Product> produits = productDao.findAll();
+         HashMap<String, Integer> jsonFlow = new HashMap<>();
 
+        for (Product produitTemp : produits){
+            if(produitTemp!=null)
+                jsonFlow.put(produitTemp.toString(), produitTemp.getPrix()-produitTemp.getPrixAchat());
+
+        }
+        return jsonFlow;
+     }
 
 }
