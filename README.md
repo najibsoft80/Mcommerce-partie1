@@ -5,7 +5,7 @@ Code pour la première partie du cours d'architecture MS
 Conformément de ce qui a été annoncé au niveau de l'exercice merci de ne prendre en compte que les commits pour chaque partie
 comme suit :
 
-ID commit commence par (dans la liste des commits ne prenez que la plus récente pour chaque partie), pour vous aider à ce situer :
+pour vous aider à se situer, ID commit commence par partie (dans la liste des commits ne prenez que la plus récente pour chaque partie):
 
 Partie 1 : 3425aea...
 Partie 2 : 6530b2c...
